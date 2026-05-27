@@ -2,9 +2,9 @@
 
 > A Lite-Adaptive Stylized AI Assistant for Millions of Multi-Style Official Accounts
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv%202509.17788-blue)](https://arxiv.org/abs/2509.17788)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![ACL 2026 Findings](https://img.shields.io/badge/ACL%202026-Findings-orange)](https://arxiv.org/abs/2509.17788)
 [![arXiv](https://img.shields.io/badge/arXiv-2509.17788-b31b1b.svg)](https://arxiv.org/abs/2509.17788)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## 📖 Overview
 
@@ -202,10 +202,10 @@ WeStar uses 12 style dimensions for annotation:
 If you find this work helpful, please cite our paper:
 
 ```bibtex
-@article{fan2026westar,
+@inproceedings{fan2026westar,
   title={One Agent to Serve All: a Lite-Adaptive Stylized AI Assistant for Millions of Multi-Style Official Accounts},
   author={Fan, Xingyu and Li, Feifei and Que, Wenhui and Li, Hailong},
-  journal={arXiv preprint arXiv:2509.17788},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2026},
   year={2026},
   url={https://arxiv.org/abs/2509.17788}
 }
