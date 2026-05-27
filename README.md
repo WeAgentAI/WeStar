@@ -192,11 +192,6 @@ WeStar uses 12 style dimensions for annotation:
 | WeStar_MDPO | **4.44** | 4.52 | 4.20 | 4.76 |
 | **WeStar** | 4.43 | **4.55** | **4.25** | **4.77** |
 
-### Online A/B Test (14 days, millions of users)
-
-- **DAU**: +0.42% (p < 0.01)
-- **Avg Dialogue Turns**: +2.62% (p < 0.01)
-
 ## 📝 Citation
 
 If you find this work helpful, please cite our paper:
