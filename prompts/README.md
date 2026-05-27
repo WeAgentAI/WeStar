@@ -24,8 +24,8 @@
 |------|------|
 | `{{title}}` | 文章标题 |
 | `{{page_content}}` | 文章正文 |
-| `{{name}}` | 公众号名称 |
-| `{{domain}}` | 公众号领域 |
+| `{{name}}` | Account name |
+| `{{domain}}` | Account domain |
 | `{{role}}` | 用户角色 |
 | `{{biz_content}}` | 检索到的知识库文章内容 |
 | `{{question}}` | 用户提问 |

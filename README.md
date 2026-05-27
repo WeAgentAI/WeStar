@@ -8,7 +8,7 @@
 
 ## 📖 Overview
 
-**WeStar** is a unified framework for stylized contextual question answering (CQSA) deployed on WeChat Official Account platforms. It serves millions of accounts with a single model by combining:
+**WeStar** is a unified framework for stylized contextual question answering (CQSA) deployed on large-scale content platforms. It serves millions of accounts with a single model by combining:
 
 - **Knowledge injection** via prompt (retrieved articles)
 - **Style injection** via LoRA parameters (per-cluster style adaptation)
@@ -52,11 +52,11 @@ Prepare your data in the following structure:
 
 ```
 data/
-├── articles/              # 公众号历史文章 (jsonl)
-│   └── {biz_id}.jsonl     # 每个公众号一个文件
-├── comments/              # 用户留言与作者回复 (jsonl)
+├── articles/              # Historical articles per account (jsonl)
+│   └── {biz_id}.jsonl     # One file per account
+├── comments/              # User comments & author replies (jsonl)
 │   └── {biz_id}.jsonl
-└── biz_meta.json          # 公众号元信息 (name, domain, etc.)
+└── biz_meta.json          # Account metadata (name, domain, etc.)
 ```
 
 **Data Format:**
