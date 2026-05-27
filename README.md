@@ -189,8 +189,8 @@ WeStar uses 12 style dimensions for annotation:
 | SFT-Prompt | 4.26 | 4.30 | 3.73 | 4.70 |
 | LoRA-SFT | 4.35 | 4.43 | 3.92 | 4.73 |
 | LoRA-SFT-S | 4.41 | 4.49 | 4.22 | 4.77 |
-| WeStar_MDPO | 4.44 | 4.52 | 4.20 | 4.76 |
-| **WeStar** | **4.43** | **4.55** | **4.25** | **4.77** |
+| WeStar_MDPO | **4.44** | 4.52 | 4.20 | 4.76 |
+| **WeStar** | 4.43 | **4.55** | **4.25** | **4.77** |
 
 ### Online A/B Test (14 days, millions of users)
 
