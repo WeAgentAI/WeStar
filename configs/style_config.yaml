@@ -1,0 +1,26 @@
+# Style Labeling Configuration
+# Step 2: Annotate accounts with 12-dimensional style labels
+
+data:
+  # Directory containing comment JSONL files
+  comments_dir: "data/comments/"
+
+prompts:
+  # Single QA labeling prompt (labels each QA pair individually)
+  style_labeling: "prompts/05_style_labeling.txt"
+  # Batch labeling prompt (labels all QAs at once, for annotation platform)
+  style_labeling_batch: "prompts/06_style_labeling_batch.txt"
+
+output:
+  # Output path for style profiles
+  styles_path: "data/biz_comment_styles.jsonl"
+
+# Use batch mode (sends all QAs at once) vs single mode (labels each QA individually)
+use_batch_labeling: false
+
+llm:
+  model: "deepseek-r1"
+  api_base: "http://localhost:8000/v1"
+  api_key: "EMPTY"
+  temperature: 0.3
+  max_tokens: 1024

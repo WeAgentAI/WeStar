@@ -1,0 +1,48 @@
+# Data files (too large for git)
+data/articles/
+data/comments/
+data/*.jsonl
+data/*.json
+!data/.gitkeep
+
+# Model checkpoints
+checkpoints/
+output/
+*.pt
+*.bin
+*.safetensors
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+wandb/
+
+# Temp
+tmp/
+temp/

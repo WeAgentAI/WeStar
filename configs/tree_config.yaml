@@ -1,0 +1,28 @@
+# Style Tree Building Configuration
+# Step 3: Hierarchical clustering of accounts by style
+
+data:
+  # Path to style profiles generated in Step 2
+  styles_path: "data/biz_comment_styles.jsonl"
+
+clustering:
+  # Style dimensions used for binary tree splitting
+  # Format: {dimension_name: positive_value}
+  # Each dimension creates a binary split (matches vs. doesn't match)
+  # 4 dimensions → up to 2^4 = 16 leaf clusters
+  dimensions:
+    Authority: "高权威性"
+    Emotional tendency: "积极情感"
+    Positivity: "肯定性与否定性不明显"
+    Emoji Frequency: "高使用频率"
+  
+  # Minimum number of samples in a cluster
+  # Clusters smaller than this will be merged into parent
+  min_cluster_size: 100
+
+  # Account IDs to exclude (optional)
+  exclude_ids: []
+
+output:
+  # Output directory for cluster tree
+  output_dir: "cluster_tree/"

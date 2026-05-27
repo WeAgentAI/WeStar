@@ -1,0 +1,28 @@
+# CQA Data Construction Configuration
+# Step 1: Generate Context-Question-Answer triplets
+
+data:
+  # Directory containing article JSONL files (one per account)
+  articles_dir: "data/articles/"
+  # Metadata file with account info (name, domain, roles)
+  biz_meta_path: "data/biz_meta.json"
+  # Comments directory for answer generation reference
+  comments_dir: "data/comments/"
+
+prompts:
+  # Prompt templates
+  forward_question: "prompts/01_forward_question_gen.txt"
+  bottom_up_question: "prompts/03_bottom_up_question_gen.txt"
+  answer_gen: "prompts/04_answer_gen.txt"
+
+output:
+  output_dir: "data/cqa_output/"
+
+llm:
+  # LLM settings for data generation
+  model: "deepseek-r1"
+  api_base: "http://localhost:8000/v1"
+  api_key: "EMPTY"
+  temperature: 0.7
+  max_tokens: 2048
+  batch_size: 10

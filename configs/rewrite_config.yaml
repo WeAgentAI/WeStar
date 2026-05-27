@@ -1,0 +1,29 @@
+# CQSA Rewriting Configuration
+# Step 4: Rewrite standard answers into stylized versions
+
+data:
+  # CQA data from Step 1
+  cqa_path: "data/cqa_output/cqa_data.jsonl"
+  # Style profiles from Step 2
+  styles_path: "data/biz_comment_styles.jsonl"
+  # Cluster labels from Step 3
+  label_path: "cluster_tree/label.json"
+  # Comments for style examples
+  comments_dir: "data/comments/"
+
+prompts:
+  cqsa_rewriting: "prompts/07_cqsa_rewriting.txt"
+
+output:
+  # Output directory (will create subdirs per cluster)
+  output_dir: "cluster_tree/"
+
+# Maximum style examples per account
+max_style_examples: 5
+
+llm:
+  model: "deepseek-r1"
+  api_base: "http://localhost:8000/v1"
+  api_key: "EMPTY"
+  temperature: 0.7
+  max_tokens: 2048

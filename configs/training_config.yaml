@@ -1,0 +1,42 @@
+# Training Data Construction Configuration
+# Step 6: Build SFT+, SeDPO, and MDPO training datasets
+
+data:
+  # Cluster tree directory containing scored data
+  cluster_tree_dir: "cluster_tree/"
+
+filtering:
+  # Minimum total score for inclusion in training data
+  min_total_score: 19
+
+# Sibling cluster mapping for SeDPO
+# Format: {target_cluster: sibling_cluster}
+# Sibling clusters have similar style but differ in specific dimensions
+sedpo_siblings:
+  "0": "2"
+  "2": "0"
+  "4": "8"
+  "8": "4"
+
+training:
+  # Base model path
+  base_model: "/path/to/Qwen3-32B"
+  
+  # LoRA configuration
+  lora_rank: 64
+  lora_alpha: 128
+  lora_target: "all"
+  
+  # Training hyperparameters
+  learning_rate: 1.0e-4
+  num_epochs: 3
+  batch_size: 4
+  gradient_accumulation: 4
+  max_length: 4096
+  
+  # DPO specific
+  dpo_beta: 0.1
+
+output:
+  # Checkpoint output directory
+  checkpoint_dir: "checkpoints/"

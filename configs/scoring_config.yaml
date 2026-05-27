@@ -1,0 +1,30 @@
+# Quality Scoring Configuration
+# Step 5: Score CQSA instances and filter top quality samples
+
+data:
+  # CQSA data directory (contains subdirs per cluster)
+  cqsa_dir: "cluster_tree/"
+  # Style profiles
+  styles_path: "data/biz_comment_styles.jsonl"
+  # Comments for style examples
+  comments_dir: "data/comments/"
+
+prompts:
+  quality_scoring: "prompts/08_quality_scoring.txt"
+
+output:
+  output_dir: "cluster_tree/"
+
+filtering:
+  # Minimum total score (sum of 4 dimensions, each 1-5)
+  # 19/20 means almost perfect across all dimensions
+  min_total_score: 19
+  # Maximum number of top samples to keep per cluster
+  top_k: 10000
+
+llm:
+  model: "deepseek-r1"
+  api_base: "http://localhost:8000/v1"
+  api_key: "EMPTY"
+  temperature: 0.1
+  max_tokens: 512
